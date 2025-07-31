@@ -23,15 +23,15 @@ public class PolicyController {
     }
 
     @PostMapping("/process1to2")
-    public String process1to2() {
-        policyService.processState1ToState2();
-        return "Processed STATE1 to STATE2";
+    public String processState1ToState2() {
+        policyService.processAllState1ToState2();
+        return "Обработка STATE1 → STATE2 завершена";
     }
 
     @PostMapping("/process2to3")
-    public String process2to3() {
-        policyService.processState2ToState3();
-        return "Processed STATE2 to STATE3";
+    public String processState2ToState3() {
+        policyService.processAllState2ToState3();
+        return "Обработка STATE2 → STATE3 завершена";
     }
 
     @GetMapping
